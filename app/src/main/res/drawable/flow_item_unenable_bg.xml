@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/flow_uncheck_color" />
+    <stroke
+        android:width="@dimen/flow_biankuang"
+        android:color="@color/flow_unenable_color" />
+    <corners android:radius="@dimen/flow_yuanjiao"/>
+</shape>

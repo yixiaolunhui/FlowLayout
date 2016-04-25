@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/flowlayout_unenable_color" />
+    <stroke
+        android:width="1dip"
+        android:color="#E4E4E4" />
+</shape>

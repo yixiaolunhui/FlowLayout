@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlowLayout">
+
+        <attr name="textSize" format="dimension"/>
+        <attr name="horizontalSpacing" format="dimension"/>
+        <attr name="verticalSpacing" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="flowBackground" format="reference"/>
+        <attr name="stype" format="dimension">
+            <enum name="select" value="0"/>
+            <enum name="tag" value="1"/>
+        </attr>
+        <attr name="isSingle" format="boolean"/>
+        <attr name="equally" format="boolean"/>
+
+    </declare-styleable>
+
+</resources>

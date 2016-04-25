@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/flowlayout_unchecked_color" />
+
+    <stroke
+        android:width="@dimen/dirver_horizontal_height"
+        android:color="@color/stroke_checked_color" />
+</shape>

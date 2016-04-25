@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.dalong.flowlayoutdemo.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="平局布局"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btn"
+                        android:text="获取所选择"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <com.dalong.flowlayout.FlowLayout
+                    android:id="@+id/mFlowLayout"
+                    app:horizontalSpacing="8dp"
+                    app:verticalSpacing="8dp"
+                    app:textSize="16dip"
+                    app:equally="true"
+                    app:stype="select"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="不平局布局"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btn2"
+                        android:text="获取所选择"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.dalong.flowlayout.FlowLayout
+                    android:id="@+id/mFlowLayout2"
+                    app:horizontalSpacing="8dp"
+                    app:verticalSpacing="8dp"
+                    app:textSize="16dip"
+                    app:equally="false"
+                    app:stype="select"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="不可点击做便签用"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btn3"
+                        android:text="获取所选择"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.dalong.flowlayout.FlowLayout
+                    android:id="@+id/mFlowLayout3"
+                    app:horizontalSpacing="8dp"
+                    app:verticalSpacing="8dp"
+                    app:textSize="16dip"
+                    app:equally="true"
+                    app:stype="tag"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="自定义文字点击颜色效果"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btn4"
+                        android:text="获取所选择"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.dalong.flowlayout.FlowLayout
+                    android:id="@+id/mFlowLayout4"
+                    app:horizontalSpacing="8dp"
+                    app:verticalSpacing="8dp"
+                    app:textSize="16dip"
+                    app:equally="true"
+                    app:stype="select"
+                    app:textColor="@color/test_flowlayout_item_text_color"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="自定义文字颜色和布局"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btn5"
+                        android:text="获取所选择"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.dalong.flowlayout.FlowLayout
+                    android:id="@+id/mFlowLayout5"
+                    app:horizontalSpacing="8dp"
+                    app:verticalSpacing="8dp"
+                    app:textSize="16dip"
+                    app:equally="true"
+                    app:stype="select"
+                    app:textColor="@color/test_flowlayout_item_text_color"
+                    app:flowBackground="@drawable/flow_item_bg_selector"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="多选"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btn6"
+                        android:text="获取所选择"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.dalong.flowlayout.FlowLayout
+                    android:id="@+id/mFlowLayout6"
+                    app:horizontalSpacing="8dp"
+                    app:verticalSpacing="8dp"
+                    app:textSize="16dip"
+                    app:equally="true"
+                    app:stype="select"
+                    app:isSingle="false"
+                    app:textColor="@color/test_flowlayout_item_text_color"
+                    app:flowBackground="@drawable/flow_item_bg_selector"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

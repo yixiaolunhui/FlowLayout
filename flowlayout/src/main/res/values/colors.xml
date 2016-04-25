@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 公共分割线-->
+    <color name="stroke_checked_color">#FF4081</color>
+    <color name="stroke_unchecked_color">#e3e3e3</color>
+
+    <color name="flowlayout_checked_color">#57609e</color>
+    <color name="flowlayout_unchecked_color">#f2f5f9</color>
+    <color name="flowlayout_unenable_color">#999999</color>
+
+    <color name="flowlayout_checked_tv_color">#8d8ea3</color>
+    <color name="white">#ffffff</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>

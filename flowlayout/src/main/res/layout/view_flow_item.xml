@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_flow_item"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--  每个单选按钮-->
+    <CheckBox
+        android:id="@+id/single_select_chk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/flowlayout_item_bg_selector"
+        android:textColor="@color/flowlayout_item_text_bg"
+        android:checked="false"
+        android:button="@null"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:text="76/43"
+        android:textSize="15sp" />
+</LinearLayout>

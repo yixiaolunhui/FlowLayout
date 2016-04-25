@@ -80,7 +80,7 @@ public class FlowLayout extends LinearLayout {
         mStype=typedArray.getInt(R.styleable.FlowLayout_stype,STYPE_SELECT);
         mTextColor=typedArray.getColorStateList(R.styleable.FlowLayout_textColor);
         mBackground=typedArray.getResourceId(R.styleable.FlowLayout_flowBackground,R.drawable.flowlayout_item_bg_selector);
-        mTextSize = (int) typedArray.getDimension(R.styleable.FlowLayout_textSize, 14)/3;
+        mTextSize = (int) typedArray.getDimension(R.styleable.FlowLayout_textSize, 14)/2;
         mHorizontalSpacing=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_horizontalSpacing,6);
         mVerticalSpacing=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_verticalSpacing,6);
         mEqually=typedArray.getBoolean(R.styleable.FlowLayout_equally,true);

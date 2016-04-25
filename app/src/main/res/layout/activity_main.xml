@@ -22,7 +22,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="平局布局"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -39,7 +39,7 @@
                     android:id="@+id/mFlowLayout"
                     app:horizontalSpacing="8dp"
                     app:verticalSpacing="8dp"
-                    app:textSize="16dip"
+                    app:textSize="16sp"
                     app:equally="true"
                     app:stype="select"
                     android:paddingLeft="8dp"
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="不平局布局"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -75,7 +75,7 @@
                     android:id="@+id/mFlowLayout2"
                     app:horizontalSpacing="8dp"
                     app:verticalSpacing="8dp"
-                    app:textSize="16dip"
+                    app:textSize="16sp"
                     app:equally="false"
                     app:stype="select"
                     android:paddingLeft="8dp"
@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="不可点击做便签用"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -111,7 +111,7 @@
                     android:id="@+id/mFlowLayout3"
                     app:horizontalSpacing="8dp"
                     app:verticalSpacing="8dp"
-                    app:textSize="16dip"
+                    app:textSize="16sp"
                     app:equally="true"
                     app:stype="tag"
                     android:paddingLeft="8dp"
@@ -129,7 +129,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="自定义文字点击颜色效果"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -145,7 +145,7 @@
                     android:id="@+id/mFlowLayout4"
                     app:horizontalSpacing="8dp"
                     app:verticalSpacing="8dp"
-                    app:textSize="16dip"
+                    app:textSize="16sp"
                     app:equally="true"
                     app:stype="select"
                     app:textColor="@color/test_flowlayout_item_text_color"
@@ -166,7 +166,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="自定义文字颜色和布局"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -182,7 +182,7 @@
                     android:id="@+id/mFlowLayout5"
                     app:horizontalSpacing="8dp"
                     app:verticalSpacing="8dp"
-                    app:textSize="16dip"
+                    app:textSize="16sp"
                     app:equally="true"
                     app:stype="select"
                     app:textColor="@color/test_flowlayout_item_text_color"
@@ -203,7 +203,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="多选"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:padding="5dp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -219,7 +219,7 @@
                     android:id="@+id/mFlowLayout6"
                     app:horizontalSpacing="8dp"
                     app:verticalSpacing="8dp"
-                    app:textSize="16dip"
+                    app:textSize="16sp"
                     app:equally="true"
                     app:stype="select"
                     app:isSingle="false"

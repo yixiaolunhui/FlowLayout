@@ -5,7 +5,7 @@
 
 # how to use
 
-` <com.dalong.flowlayout.FlowLayout
+             <com.dalong.flowlayout.FlowLayout
                     android:id="@+id/mFlowLayout6"
                     app:horizontalSpacing="8dp"
                     app:verticalSpacing="8dp"
@@ -18,7 +18,7 @@
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>`
+                    android:layout_height="wrap_content"/>
 
 
 

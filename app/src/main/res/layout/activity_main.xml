@@ -19,6 +19,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:background="@color/titlebg"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="平局布局"
@@ -60,6 +61,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:background="@color/titlebg"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="不平局布局"
@@ -100,6 +102,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:background="@color/titlebg"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="不可点击做便签用"
@@ -128,6 +131,7 @@
                     app:itemPaddingBottom="2dp"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
+                    app:flowBackground="@drawable/flow_item_bg_selector"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -138,6 +142,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:background="@color/titlebg"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="自定义文字点击颜色效果"
@@ -179,6 +184,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:background="@color/titlebg"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="自定义文字颜色和布局"
@@ -220,6 +226,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
+                    android:background="@color/titlebg"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="多选"

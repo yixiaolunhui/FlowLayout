@@ -24,19 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         intView();
         initData();
-        intListener();
 
     }
 
-    private void intListener() {
-        mFlowLayout.setOnSelectListener(new FlowLayout.OnSelectListener() {
-            @Override
-            public void onSelect(int position) {
-                if(position==-1)return;
-                Toast.makeText(MainActivity.this,"点击了："+mList.get(position).getFlowName(),Toast.LENGTH_LONG).show();
-            }
-        });
-    }
 
     private void initData() {
         mList=getPhoneList();

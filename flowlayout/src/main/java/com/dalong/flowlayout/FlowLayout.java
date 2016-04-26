@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,14 @@ public class FlowLayout extends LinearLayout {
     private final static int  STYPE_SELECT=0;// 可选择的
 
     private final static int  STYPE_TAG=1;//便签 没有选中区分
+
+    private  int mItemPaddingLeft;//左边距
+
+    private  int mItemPaddingTop;//上边距
+
+    private  int mItemPaddingRight;//右边距
+
+    private  int mItemPaddingBottom;//底边距
 
     private  boolean mIsSingle=true;//是否单选
 
@@ -80,14 +90,16 @@ public class FlowLayout extends LinearLayout {
         mStype=typedArray.getInt(R.styleable.FlowLayout_stype,STYPE_SELECT);
         mTextColor=typedArray.getColorStateList(R.styleable.FlowLayout_textColor);
         mBackground=typedArray.getResourceId(R.styleable.FlowLayout_flowBackground,R.drawable.flowlayout_item_bg_selector);
-        mTextSize = (int) typedArray.getDimension(R.styleable.FlowLayout_textSize, 14)/2;
+        mTextSize = px2sp(context,(int) typedArray.getDimensionPixelSize(R.styleable.FlowLayout_textSize,14));
         mHorizontalSpacing=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_horizontalSpacing,6);
         mVerticalSpacing=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_verticalSpacing,6);
+        mItemPaddingLeft=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingLeft,15);
+        mItemPaddingTop=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingTop,10);
+        mItemPaddingRight=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingRight,15);
+        mItemPaddingBottom=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingBottom,10);
         mEqually=typedArray.getBoolean(R.styleable.FlowLayout_equally,true);
         mIsSingle=typedArray.getBoolean(R.styleable.FlowLayout_isSingle,true);
         typedArray.recycle();
-
-
 
         this.mContext = context;
         this.mLayoutInflater = (LayoutInflater) context
@@ -126,7 +138,8 @@ public class FlowLayout extends LinearLayout {
             LinearLayout mFlowItem = (LinearLayout) itemView.findViewById(R.id.view_flow_item);
             chk.setOnClickListener(new OnChkClickEvent2());
             chk.setText(mData.get(i).getFlowName());
-            chk.setTextSize(mTextSize);
+            chk.setTextSize(TypedValue.COMPLEX_UNIT_SP,mTextSize);
+            chk.setPadding(mItemPaddingLeft,mItemPaddingTop,mItemPaddingRight,mItemPaddingBottom);
             if(mTextColor!=null) chk.setTextColor(mTextColor);
             chk.setBackgroundResource(mBackground);
             chk.setTag(i);
@@ -539,5 +552,17 @@ public class FlowLayout extends LinearLayout {
     public int dip2px(Context context, float dipValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
+    }
+
+    /**
+     * 将px值转换为sp值，保证文字大小不变
+     *
+     * @param pxValue
+     *            （DisplayMetrics类中属性scaledDensity）
+     * @return
+     */
+    public static int px2sp(Context context, float pxValue) {
+        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (pxValue / fontScale + 0.5f);
     }
 }

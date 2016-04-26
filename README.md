@@ -26,7 +26,7 @@
 
 # gradle
 
-   compile 'com.dalong:flowlayout:1.0.0'
+   compile 'com.dalong:flowlayout:1.0.1'
 
 
 

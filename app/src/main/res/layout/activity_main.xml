@@ -49,6 +49,7 @@
                     app:itemPaddingBottom="2dp"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
+                    app:flowGravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -88,6 +89,7 @@
                     app:itemPaddingTop="2dp"
                     app:itemPaddingRight="5dp"
                     app:itemPaddingBottom="2dp"
+                    app:flowGravity="center"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:layout_width="match_parent"
@@ -129,6 +131,7 @@
                     app:itemPaddingTop="2dp"
                     app:itemPaddingRight="5dp"
                     app:itemPaddingBottom="2dp"
+                    app:flowGravity="center"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     app:flowBackground="@drawable/flow_item_bg_selector"
@@ -169,6 +172,7 @@
                     app:itemPaddingTop="2dp"
                     app:itemPaddingRight="5dp"
                     app:itemPaddingBottom="2dp"
+                    app:flowGravity="center"
                     app:textColor="@color/test_flowlayout_item_text_color"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
@@ -211,6 +215,7 @@
                     app:itemPaddingTop="2dp"
                     app:itemPaddingRight="5dp"
                     app:itemPaddingBottom="2dp"
+                    app:flowGravity="center"
                     app:textColor="@color/test_flowlayout_item_text_color"
                     app:flowBackground="@drawable/flow_item_bg_selector"
                     android:paddingLeft="8dp"
@@ -254,11 +259,12 @@
                     app:itemPaddingTop="2dp"
                     app:itemPaddingRight="5dp"
                     app:itemPaddingBottom="2dp"
+                    app:flowGravity="center"
                     app:textColor="@color/test_flowlayout_item_text_color"
                     app:flowBackground="@drawable/flow_item_bg_selector"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>

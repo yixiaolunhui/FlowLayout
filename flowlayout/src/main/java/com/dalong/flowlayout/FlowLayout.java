@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 流布局
  * Created by zhouweilong on 16/4/22.
  */
 public class FlowLayout extends LinearLayout {
@@ -24,6 +26,8 @@ public class FlowLayout extends LinearLayout {
     private final static int  STYPE_SELECT=0;// 可选择的
 
     private final static int  STYPE_TAG=1;//便签 没有选中区分
+
+    private  int mGivity;//默认是0
 
     private  int mItemPaddingLeft;//左边距
 
@@ -99,6 +103,7 @@ public class FlowLayout extends LinearLayout {
         mItemPaddingBottom=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingBottom,10);
         mEqually=typedArray.getBoolean(R.styleable.FlowLayout_equally,true);
         mIsSingle=typedArray.getBoolean(R.styleable.FlowLayout_isSingle,true);
+        mGivity=typedArray.getInt(R.styleable.FlowLayout_flowGravity,0);
         typedArray.recycle();
 
         this.mContext = context;
@@ -281,7 +286,18 @@ public class FlowLayout extends LinearLayout {
                 LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         llytRow.setOrientation(LinearLayout.HORIZONTAL);
         lp.setMargins(0, mVerticalSpacing/2, 0, mVerticalSpacing/2);
+        switch (mGivity){
+            case 0:
+                llytRow.setGravity(Gravity.LEFT);
+                break;
+            case 1:
+                llytRow.setGravity(Gravity.CENTER);
+                break;
+            case 2:
+                llytRow.setGravity(Gravity.RIGHT);
+                break;
 
+        }
         llytRow.setLayoutParams(lp);
         return llytRow;
     }

@@ -20,6 +20,7 @@
             <enum name="select" value="0"/>
             <enum name="tag" value="1"/>
         </attr>
+        <attr name="maxNum" format="integer"/>
         <attr name="isSingle" format="boolean"/>
         <attr name="equally" format="boolean"/>
 

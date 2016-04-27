@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,8 @@ public class FlowLayout extends LinearLayout {
     private final static int  STYPE_SELECT=0;// 可选择的
 
     private final static int  STYPE_TAG=1;//便签 没有选中区分
+
+    private  int mMaxNum=-1;//最大值
 
     private  int mGivity;//默认是0
 
@@ -104,6 +107,7 @@ public class FlowLayout extends LinearLayout {
         mEqually=typedArray.getBoolean(R.styleable.FlowLayout_equally,true);
         mIsSingle=typedArray.getBoolean(R.styleable.FlowLayout_isSingle,true);
         mGivity=typedArray.getInt(R.styleable.FlowLayout_flowGravity,0);
+        mMaxNum=typedArray.getInt(R.styleable.FlowLayout_maxNum,-1);
         typedArray.recycle();
 
         this.mContext = context;
@@ -323,6 +327,7 @@ public class FlowLayout extends LinearLayout {
      */
     public interface OnSelectListener {
         void onSelect(int position);
+        void onOutLimit();//超出限制数量
     }
 
     /**
@@ -343,6 +348,13 @@ public class FlowLayout extends LinearLayout {
             CheckBox chk = (CheckBox) v;
             if (chk.isChecked()) {
                 mSelectPosition = (Integer) chk.getTag();
+                if(mMaxNum!=-1&&!mIsSingle&&isSelectedIndexs().size()>mMaxNum){
+                    setUnChecked(chk);
+                    if (mOnSelectListener != null) {
+                        mOnSelectListener.onOutLimit();// 超出限制
+                    }
+                    return;
+                }
                 notifyAllItemView(mSelectPosition);
             } else {
                 setUnChecked(chk);

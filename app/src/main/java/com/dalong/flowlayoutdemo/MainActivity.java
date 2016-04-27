@@ -24,7 +24,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         intView();
         initData();
+        initListenr();
+    }
 
+    private void initListenr() {
+        mFlowLayout6.setOnSelectListener(new FlowLayout.OnSelectListener() {
+            @Override
+            public void onSelect(int position) {
+                Toast.makeText(MainActivity.this,"position："+position,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onOutLimit() {
+                Toast.makeText(MainActivity.this,"超出限制",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 

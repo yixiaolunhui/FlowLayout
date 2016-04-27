@@ -260,6 +260,7 @@
                     app:itemPaddingRight="5dp"
                     app:itemPaddingBottom="2dp"
                     app:flowGravity="center"
+                    app:maxNum="6"
                     app:textColor="@color/test_flowlayout_item_text_color"
                     app:flowBackground="@drawable/flow_item_bg_selector"
                     android:paddingLeft="8dp"

@@ -37,20 +37,22 @@
                 </LinearLayout>
 
                 <com.dalong.flowlayout.FlowLayout
+                    android:background="@color/colorAccent"
                     android:id="@+id/mFlowLayout"
                     app:horizontalSpacing="8dp"
                     app:verticalSpacing="8dp"
                     app:textSize="16sp"
                     app:equally="true"
                     app:stype="select"
+                    app:flowWidth="200dp"
                     app:itemPaddingLeft="5dp"
                     app:itemPaddingTop="2dp"
                     app:itemPaddingRight="5dp"
                     app:itemPaddingBottom="2dp"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    app:flowGravity="center"
-                    android:layout_width="match_parent"
+                    app:flowGravity="left"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
 
@@ -85,6 +87,7 @@
                     app:textSize="16sp"
                     app:equally="false"
                     app:stype="select"
+                    app:flowWidth="150dp"
                     app:itemPaddingLeft="5dp"
                     app:itemPaddingTop="2dp"
                     app:itemPaddingRight="5dp"
@@ -126,6 +129,7 @@
                     app:verticalSpacing="8dp"
                     app:textSize="16sp"
                     app:equally="true"
+                    app:flowWidth="120dp"
                     app:stype="tag"
                     app:itemPaddingLeft="5dp"
                     app:itemPaddingTop="2dp"
@@ -211,6 +215,7 @@
                     app:textSize="16sp"
                     app:equally="true"
                     app:stype="select"
+                    app:flowWidth="100dp"
                     app:itemPaddingLeft="5dp"
                     app:itemPaddingTop="2dp"
                     app:itemPaddingRight="5dp"
@@ -261,6 +266,7 @@
                     app:itemPaddingBottom="2dp"
                     app:flowGravity="center"
                     app:maxNum="6"
+                    app:flowWidth="50dp"
                     app:textColor="@color/test_flowlayout_item_text_color"
                     app:flowBackground="@drawable/flow_item_bg_selector"
                     android:paddingLeft="8dp"

@@ -1,9 +1,18 @@
 # For most of the current demand flowlayout
 
-# sample
+# 效果图
 ![image](https://github.com/dalong982242260/FlowLayout/blob/master/gif/flowlayout.gif?raw=true)
 
-# how to use
+## 1.0.2版本新增功能：
+增加设置宽度flowWidth，解决设置宽度，内容显示不全的问题，如果没有设置flowwidth默认手机宽度，layout_width参数其实无效，请知晓
+
+
+## 1.0.1版本新增功能：
+增加设置每个item的内边距
+
+
+
+# 如何使用
 
               <com.dalong.flowlayout.FlowLayout
                                  android:id="@+id/mFlowLayout"
@@ -24,9 +33,9 @@
                                  android:layout_width="match_parent"
                                  android:layout_height="wrap_content"/>
 
-# gradle
+# gradle使用
 
-   compile 'com.dalong:flowlayout:1.0.1'
+   compile 'com.dalong:flowlayout:1.0.2'
 
 
 

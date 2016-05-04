@@ -28,6 +28,8 @@ public class FlowLayout extends LinearLayout {
 
     private final static int  STYPE_TAG=1;//便签 没有选中区分
 
+    private  int mWidth;//自定义宽度
+
     private  int mMaxNum=-1;//最大值
 
     private  int mGivity;//默认是0
@@ -93,6 +95,13 @@ public class FlowLayout extends LinearLayout {
     public FlowLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
+        this.mContext = context;
+        this.mLayoutInflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.wm = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+        this.mSrcW = context.getResources().getDisplayMetrics().widthPixels;
+
         TypedArray typedArray=context.obtainStyledAttributes(attrs,R.styleable.FlowLayout);
         mStype=typedArray.getInt(R.styleable.FlowLayout_stype,STYPE_SELECT);
         mTextColor=typedArray.getColorStateList(R.styleable.FlowLayout_textColor);
@@ -104,19 +113,14 @@ public class FlowLayout extends LinearLayout {
         mItemPaddingTop=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingTop,10);
         mItemPaddingRight=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingRight,15);
         mItemPaddingBottom=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingBottom,10);
+        mWidth=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_flowWidth,mSrcW);
         mEqually=typedArray.getBoolean(R.styleable.FlowLayout_equally,true);
         mIsSingle=typedArray.getBoolean(R.styleable.FlowLayout_isSingle,true);
         mGivity=typedArray.getInt(R.styleable.FlowLayout_flowGravity,0);
         mMaxNum=typedArray.getInt(R.styleable.FlowLayout_maxNum,-1);
         typedArray.recycle();
-
-        this.mContext = context;
-        this.mLayoutInflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        this.wm = (WindowManager) context
-                .getSystemService(Context.WINDOW_SERVICE);
-        this.mSrcW = context.getResources().getDisplayMetrics().widthPixels;
-
+        this.mSrcW=mWidth;
+        setLayoutParams(new ViewGroup.LayoutParams(mSrcW,ViewGroup.LayoutParams.WRAP_CONTENT));
     }
 
     /**

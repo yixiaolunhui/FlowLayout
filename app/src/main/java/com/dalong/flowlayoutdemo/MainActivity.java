@@ -14,9 +14,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private FlowLayout mFlowLayout,mFlowLayout2,mFlowLayout3,mFlowLayout4,mFlowLayout5,mFlowLayout6;
+    private FlowLayout mFlowLayout1,mFlowLayout0,mFlowLayout,mFlowLayout2,
+            mFlowLayout3,mFlowLayout4,mFlowLayout5,mFlowLayout6,mFlowLayout7,mFlowLayout8;
     private List<Flow> mList;
-    private Button mBtn1,mBtn2,mBtn3,mBtn4,mBtn5,mBtn6;
+    private Button mBtn0,mBtn,mBtn1,mBtn2,mBtn3,mBtn4,mBtn5,mBtn6,mBtn7,mBtn8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initData() {
         mList=getPhoneList();
+        mFlowLayout0.setFlowData(mList);
+        mFlowLayout1.setFlowData(mList);
+
         mFlowLayout.setFlowData(mList);
         mFlowLayout.setDefaultSelect(1);
 
@@ -62,21 +66,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mFlowLayout6.setFlowData(mList);
         mFlowLayout6.setDefaultSelects(new int[]{1,3,5});
 
+        mFlowLayout7.setFlowData(mList);
+
+        mFlowLayout8.setFlowData(mList);
+
     }
 
     private void intView() {
+        mFlowLayout0=(FlowLayout)findViewById(R.id.mFlowLayout0);
+        mFlowLayout1=(FlowLayout)findViewById(R.id.mFlowLayout1);
         mFlowLayout=(FlowLayout)findViewById(R.id.mFlowLayout);
         mFlowLayout2=(FlowLayout)findViewById(R.id.mFlowLayout2);
         mFlowLayout3=(FlowLayout)findViewById(R.id.mFlowLayout3);
         mFlowLayout4=(FlowLayout)findViewById(R.id.mFlowLayout4);
         mFlowLayout5=(FlowLayout)findViewById(R.id.mFlowLayout5);
         mFlowLayout6=(FlowLayout)findViewById(R.id.mFlowLayout6);
-        mBtn1=(Button)findViewById(R.id.btn);
+        mFlowLayout7=(FlowLayout)findViewById(R.id.mFlowLayout7);
+        mFlowLayout8=(FlowLayout)findViewById(R.id.mFlowLayout8);
+        mBtn0=(Button)findViewById(R.id.btn0);
+        mBtn1=(Button)findViewById(R.id.btn1);
+        mBtn=(Button)findViewById(R.id.btn);
         mBtn2=(Button)findViewById(R.id.btn2);
         mBtn3=(Button)findViewById(R.id.btn3);
         mBtn4=(Button)findViewById(R.id.btn4);
         mBtn5=(Button)findViewById(R.id.btn5);
         mBtn6=(Button)findViewById(R.id.btn6);
+        mBtn7=(Button)findViewById(R.id.btn7);
+        mBtn8=(Button)findViewById(R.id.btn8);
         mBtn1.setOnClickListener(this);
         mBtn2.setOnClickListener(this);
         mBtn3.setOnClickListener(this);

@@ -11,7 +11,6 @@
         <attr name="itemPaddingLeft" format="dimension"/>
         <attr name="textColor" format="color"/>
         <attr name="flowBackground" format="reference"/>
-        <attr name="flowWidth" format="dimension"/>
         <attr name="flowGravity" format="dimension">
             <enum name="left" value="0"/>
             <enum name="center" value="1"/>

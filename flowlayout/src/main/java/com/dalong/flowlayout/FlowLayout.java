@@ -3,6 +3,7 @@ package com.dalong.flowlayout;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -113,14 +114,11 @@ public class FlowLayout extends LinearLayout {
         mItemPaddingTop=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingTop,10);
         mItemPaddingRight=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingRight,15);
         mItemPaddingBottom=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_itemPaddingBottom,10);
-        mWidth=typedArray.getDimensionPixelSize(R.styleable.FlowLayout_flowWidth,mSrcW);
         mEqually=typedArray.getBoolean(R.styleable.FlowLayout_equally,true);
         mIsSingle=typedArray.getBoolean(R.styleable.FlowLayout_isSingle,true);
         mGivity=typedArray.getInt(R.styleable.FlowLayout_flowGravity,0);
         mMaxNum=typedArray.getInt(R.styleable.FlowLayout_maxNum,-1);
         typedArray.recycle();
-        this.mSrcW=mWidth;
-        setLayoutParams(new ViewGroup.LayoutParams(mSrcW,ViewGroup.LayoutParams.WRAP_CONTENT));
     }
 
     /**
@@ -129,6 +127,8 @@ public class FlowLayout extends LinearLayout {
      */
     public void  setFlowData(List<Flow> data){
         this.mData=data;
+        mSrcW=getMeasuredWidth();
+        measureView(getRootView());
         View  view= mLayoutInflater.inflate(R.layout.view_flow_layout,this);
         mFlowLayout=(LinearLayout)view.findViewById(R.id.view_flow_layout);
         clearViews();
@@ -136,7 +136,11 @@ public class FlowLayout extends LinearLayout {
 
     }
 
-
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        mSrcW=MeasureSpec.getSize(widthMeasureSpec);
+    }
 
     /**
      *  初始化view

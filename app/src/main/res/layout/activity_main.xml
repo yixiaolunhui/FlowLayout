@@ -163,7 +163,7 @@
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     app:flowGravity="left"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
             <LinearLayout
@@ -291,7 +291,7 @@
                     app:flowGravity="center"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:layout_width="350dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
 
@@ -335,7 +335,7 @@
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     app:flowBackground="@drawable/flow_item_bg_selector"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
             <LinearLayout
@@ -468,7 +468,7 @@
                     app:flowBackground="@drawable/flow_item_bg_selector"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>

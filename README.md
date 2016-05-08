@@ -3,6 +3,10 @@
 # 效果图
 ![image](https://github.com/dalong982242260/FlowLayout/blob/master/gif/flowlayout.gif?raw=true)
 
+## 1.0.3版本新增功能：
+解决设置宽度问题，去除flowwidth字段，宽度可设置layout_width参数具体dp或者权重都可以。
+
+
 ## 1.0.2版本新增功能：
 增加设置宽度flowWidth，解决设置宽度，内容显示不全的问题，如果没有设置flowwidth默认手机宽度，layout_width参数其实无效，请知晓
 
@@ -30,12 +34,12 @@
                                  app:flowBackground="@drawable/flow_item_bg_selector"  //设置流布局布局选择器  默认一套 
                                  android:paddingLeft="8dp"
                                  android:paddingRight="8dp"
-                                 android:layout_width="match_parent"
+                                 android:layout_width="200dp"
                                  android:layout_height="wrap_content"/>
 
 # gradle使用
 
-   compile 'com.dalong:flowlayout:1.0.2'
+   compile 'com.dalong:flowlayout:1.0.3'
 
 
 

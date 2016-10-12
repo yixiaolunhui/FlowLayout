@@ -33,6 +33,8 @@ public class FlowLayout extends LinearLayout {
 
     private  int mMaxNum=-1;//最大值
 
+    private  int mMaxRows=-1;//最大行数
+
     private  int mGivity;//默认是0
 
     private  int mItemPaddingLeft;//左边距
@@ -118,6 +120,7 @@ public class FlowLayout extends LinearLayout {
         mIsSingle=typedArray.getBoolean(R.styleable.FlowLayout_isSingle,true);
         mGivity=typedArray.getInt(R.styleable.FlowLayout_flowGravity,0);
         mMaxNum=typedArray.getInt(R.styleable.FlowLayout_maxNum,-1);
+        mMaxRows=typedArray.getInt(R.styleable.FlowLayout_maxRows,-1);
         typedArray.recycle();
     }
 
@@ -201,6 +204,9 @@ public class FlowLayout extends LinearLayout {
                 if (parent != null) {
                     parent.removeAllViewsInLayout();
                 }
+                if(mMaxRows!=-1&&mFlowLayout.getChildCount()>=mMaxRows){
+                    return;
+                }
                 mFlowLayout.addView(llytRow);
                 llytRow = getNewRow();
                 llytRow.addView(itemView);
@@ -227,6 +233,9 @@ public class FlowLayout extends LinearLayout {
 
         // 重新绘制每个条目的宽度
         int itemW = (mSrcW - getPaddingLeft()-getPaddingRight()) / maxOneRowItemCount;
+        if(mMaxRows!=-1){
+            rowCount=rowCount>=mMaxRows?mMaxRows:rowCount;
+        }
         for (int i = 0; i < rowCount; i++) {
             // new一个新的行的线性布局，用于添加每行的条目
             LinearLayout llytRow = getNewRow();

@@ -124,14 +124,22 @@ public class FlowLayout extends LinearLayout {
         typedArray.recycle();
     }
 
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int widthMode=MeasureSpec.getMode(widthMeasureSpec);
+        int widthSize=MeasureSpec.getSize(widthMeasureSpec);
+        if(widthMode==MeasureSpec.AT_MOST)mSrcW=300;
+        else mSrcW=widthSize;
+    }
+
     /**
      * 设置数据
      * @param data
      */
     public void  setFlowData(List<Flow> data){
         this.mData=data;
-        mSrcW=getMeasuredWidth();
-        measureView(getRootView());
         View  view= mLayoutInflater.inflate(R.layout.view_flow_layout,this);
         mFlowLayout=(LinearLayout)view.findViewById(R.id.view_flow_layout);
         clearViews();
@@ -139,11 +147,6 @@ public class FlowLayout extends LinearLayout {
 
     }
 
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        mSrcW=MeasureSpec.getSize(widthMeasureSpec);
-    }
 
     /**
      *  初始化view

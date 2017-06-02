@@ -27,4 +27,20 @@
 
     </declare-styleable>
 
+    <declare-styleable name="DLFlowLayout">
+        <attr name="DL_horizontalSpacing" format="dimension"/>
+        <attr name="DL_verticalSpacing" format="dimension"/>
+        <attr name="DL_flowBg" format="reference"/>
+        <attr name="DL_textSize" format="float"/>
+        <attr name="DL_textColor" format="color"/>
+        <attr name="DL_isSingle" format="boolean"/>
+        <attr name="DL_equally" format="boolean"/>
+        <attr name="DL_maxSelectNum" format="integer"/>
+        <attr name="DL_stype" format="dimension">
+            <enum name="select" value="0"/>
+            <enum name="tag" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
 </resources>

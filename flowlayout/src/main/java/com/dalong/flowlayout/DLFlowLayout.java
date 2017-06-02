@@ -352,7 +352,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置数据
      *
-     * @param data
+     * @param data 数据
      */
     public void setFlowData(List<Flow> data) {
         this.mData = data;
@@ -385,7 +385,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 添加view
      *
-     * @param flow
+     * @param flow  数据
      */
     public void addChildView(Flow flow) {
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.view_flow_item, null);
@@ -433,6 +433,8 @@ public class DLFlowLayout extends ViewGroup {
 
     /**
      * 测量一个单选按钮的长度
+     * @param v view
+     *
      */
     public void measureView(View v) {
         if (v == null) {
@@ -481,7 +483,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置默认选中项 name
      *
-     * @param selectName
+     * @param selectName 选中的name
      */
     public void setDefaultSelectName(String selectName) {
         for (int i = 0; i < mData.size(); i++) {
@@ -498,7 +500,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置默认选中项 id
      *
-     * @param selectId
+     * @param selectId  要设置选中的id
      */
     public void setDefaultSelectId(String selectId) {
         for (int i = 0; i < mData.size(); i++) {
@@ -514,7 +516,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置默认选中项
      *
-     * @param select
+     * @param select  设置默认选中的index
      */
     public void setDefaultSelect(int select) {
         notifyAllItemView(select);
@@ -573,6 +575,7 @@ public class DLFlowLayout extends ViewGroup {
 
     /**
      * 设置不可点击项
+     * @param position  位置
      */
     public void setUnEnable(int position) {
         for (int i = 0; i < getChildCount(); i++) {
@@ -595,7 +598,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置不可点击
      *
-     * @param view
+     * @param view 子view
      */
     public void setUnRnable(View view) {
         CheckBox chk = (CheckBox) view.findViewById(R.id.single_select_chk);
@@ -605,7 +608,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 获取是否被选择
      *
-     * @return
+     * @return 是否被选择了
      */
     public boolean isSelectPosition() {
         for (int i = 0; i < getChildCount(); i++) {
@@ -619,7 +622,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 获取选择的那个index(单选的时候可以直接用这个方法，如果的多选你用这个方法就会默认拿到第一个)
      *
-     * @return
+     * @return 返回选中的集合
      */
     public int isSelectedIndex() {
         for (int i = 0; i < getChildCount(); i++) {
@@ -632,8 +635,7 @@ public class DLFlowLayout extends ViewGroup {
 
     /**
      * 获取选择的集合(多选)
-     *
-     * @return
+     * @return 返回选中的index集合
      */
     public List<Integer> isSelectedIndexs() {
         List<Integer> mList = new ArrayList<>();
@@ -649,7 +651,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置还没有选择的样式
      *
-     * @param view
+     * @param view 子view
      */
     private void setUnChecked(CheckBox view) {
         view.setChecked(false);
@@ -658,7 +660,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置被选择的样式
      *
-     * @param view
+     * @param view checkbox
      */
     private void setChecked(CheckBox view) {
         view.setChecked(true);
@@ -667,7 +669,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置被设置能点击的样式
      *
-     * @param view
+     * @param view checkbox
      */
     private void setEnabled(CheckBox view) {
         view.setEnabled(true);
@@ -676,7 +678,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 设置不能被点击的样式
      *
-     * @param view
+     * @param view checkbox
      */
     private void setUnEnabled(CheckBox view) {
         view.setEnabled(false);
@@ -686,10 +688,9 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 描述：dip转换为px
      *
-     * @param context
-     * @param dipValue
-     * @return
-     * @throws
+     * @param context  上下文
+     * @param dipValue dip值
+     * @return   px值
      */
     public int dip2px(Context context, float dipValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
@@ -711,7 +712,7 @@ public class DLFlowLayout extends ViewGroup {
     /**
      * 实现接口回调
      *
-     * @param l
+     * @param l 接口
      */
     public void setOnSelectListener(OnSelectListener l) {
         this.mOnSelectListener = l;

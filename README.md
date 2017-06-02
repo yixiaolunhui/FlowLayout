@@ -5,7 +5,7 @@
 
 ![image](https://github.com/dalong982242260/FlowLayout/blob/master/gif/tag.gif?raw=true)
 
-## 1.0.4版本新增功能：
+## 2.0.0 版本新增功能：
         1、解决流布局显示问其题，如设置padding或者在其他布局中显示问题。
         2、单选
         3、多选  增加最大数量限制设置及回调。
@@ -30,7 +30,7 @@
 
 # gradle使用
 
-   compile 'com.dalong:flowlayout:1.0.4'
+   compile 'com.dalong:flowlayout:2.0.0'
 
 
 

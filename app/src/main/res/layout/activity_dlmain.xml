@@ -19,12 +19,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
-            app:DL_equally="true"
+            app:DL_equally="false"
             app:DL_flowBg="@drawable/bg_tag"
             app:DL_horizontalSpacing="5dp"
             app:DL_isSingle="false"
             app:DL_maxSelectNum="3"
-            app:DL_stype="select"
+            app:DL_stype="tag"
             app:DL_textSize="15"
             app:DL_verticalSpacing="5dp"/>
 

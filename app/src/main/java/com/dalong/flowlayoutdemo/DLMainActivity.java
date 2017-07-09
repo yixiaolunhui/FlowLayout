@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * qianqian
+ */
 public class DLMainActivity extends AppCompatActivity {
 
     private DLFlowLayout flowLayout;
